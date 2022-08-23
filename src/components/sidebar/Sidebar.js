@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
+
 import {
     MdOutlineDashboard,
     MdOutlineSupervisedUserCircle,
@@ -37,14 +39,15 @@ const Sidebar = () => {
     ]
 
     const Menu = MenuItems.map(item => {
+        let id = uuidv4();
         return (
-            <>
+            <Fragment key={id.toString()}>
                 {item.title && <p className='title'>{menuOpen ? item.title : item.smallTitle}</p>}
                 <li>
                     <div className='d'>{item.icon}</div>
                     <span>{item.name}</span>
                 </li>
-            </>
+            </Fragment>
 
         )
     })
