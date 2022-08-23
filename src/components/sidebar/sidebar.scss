@@ -3,7 +3,7 @@
     min-height: 100vh;
     min-width: 200px;
     background-color: white;
-    //transition: all 0.2s;
+    border-right: 1px solid rgb(245, 245, 245);
 
     .top {
         height: 50px;
@@ -11,6 +11,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        border-bottom: 1px solid rgb(245, 245, 245);
 
         .hamburgerMenu {
             position: absolute;
@@ -115,16 +116,18 @@
 
     li {
         width: 33px;
-        span{
+
+        span {
             display: none;
         }
     }
-    .middle ul .title{
+
+    .middle ul .title {
         display: flex;
         justify-content: center;
     }
 
-    .hamburgerMenu{
+    .hamburgerMenu {
         right: 15px;
     }
 }
